@@ -1,0 +1,7 @@
+services:
+  latex:
+    image: texlive/texlive:TL2025-historic
+    container_name: latex
+    working_dir: /latex
+    volumes:
+    - ./:/latex
