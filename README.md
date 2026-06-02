@@ -1,5 +1,9 @@
 # Latex Template
 
+![docker](https://img.shields.io/badge/Docker-dodgerblue?logo=docker&logoColor=white)
+![latex](https://img.shields.io/badge/LaTeX-forestgreen?logo=latex&logoColor=white)
+![gpl](https://img.shields.io/badge/License-GPLv3-blue)
+
 A LaTeX template for documenting university projects.
 
 ## Docker
