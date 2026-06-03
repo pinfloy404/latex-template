@@ -1,0 +1,9 @@
+{
+    "name": "latex-template",
+    "image": "texlive/texlive:TL2025-historic",
+    "customizations": {
+        "vscode": {
+            "extensions": ["james-yu.latex-workshop"]
+        }
+    }
+}
