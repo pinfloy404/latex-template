@@ -2,5 +2,6 @@
 */*.fdb*
 */*.fls
 */*.log
+*/*.out
 */*.pdf
 */*.synctex*
