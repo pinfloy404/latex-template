@@ -1,7 +1,8 @@
 services:
-  latex:
+  latex-template:
     image: texlive/texlive:TL2025-historic
     container_name: latex-template
-    working_dir: /latex
+    working_dir: /latex-template/latex
     volumes:
-    - ./:/latex
+    - ./:/latex-template
+    command: latexmk -pdf main.tex

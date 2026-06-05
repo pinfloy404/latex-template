@@ -8,15 +8,24 @@
 
 A LaTeX template for documenting university projects.
 
+This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive) for all options.
+
 ## DevContainer (Recommended)
 
-This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive), this is intended for **VS Code**.
+> [!WARNING]
+> Only recommended if you're using **VS Code** o similar
 
-DevContainer configuration file adds [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) to facilitate work with LaTeX.
+This template uses a *DevContainer* configuration file at `.devcontainer` folder to create a separated working space with a *TexLive* image without install multiple packages.
+
+This *DevContainer* configuration file adds [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) to facilitate the work with LaTeX.
 
 ## Docker
 
-This uses the same [Docker image](https://hub.docker.com/r/texlive/texlive) as before.
+This template uses a *Docker Compose* file to create a *Docker* container with a *TexLive* image and all of it's packages, mounting a volume at `\latex-template` and this command to compile and generate a **.pdf** file:
+
+```bash
+latexmk -pdf latex/main.tex
+```
 
 To manage the container and compile the project, you can use these commands:
 
@@ -26,22 +35,14 @@ docker compose up -d
 ```
 
 ```bash
-#   Compile project
-docker compose run --rm latex-template
-```
-
-```bash
 #   Closes container
-docker compose down
-```
-
-```bash
-#   Closes container (Removes volumes)
 docker compose down -v
 ```
 
-> [!WARNING]
-> This command removes all data in the container.
+```bash
+#   Creates container, compiles project from Docker and closes container
+docker compose run --rm latex-template
+```
 
 ## License
 
