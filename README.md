@@ -8,38 +8,40 @@
 
 A LaTeX template for documenting university projects.
 
+## DevContainer (Recommended)
+
+This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive), this is intended for **VS Code**.
+
+DevContainer configuration file adds [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) to facilitate work with LaTeX.
+
 ## Docker
 
-This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive).
+This uses the same [Docker image](https://hub.docker.com/r/texlive/texlive) as before.
 
-To manage the container, you can use these commands:
+To manage the container and compile the project, you can use these commands:
 
 ```bash
 #   Creates container
-docker compose run up -d
+docker compose up -d
+```
+
+```bash
+#   Compile project
+docker compose run --rm latex-template
 ```
 
 ```bash
 #   Closes container
-docker compose run down
+docker compose down
 ```
 
 ```bash
 #   Closes container (Removes volumes)
-docker compose run down -v
+docker compose down -v
 ```
 
 > [!WARNING]
 > This command removes all data in the container.
-
-## DevContainer
-
-This uses the same [Docker image](https://hub.docker.com/r/texlive/texlive) as before, this is intended for **VS Code**.
-
-DevContainer configuration file adds [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) to facilitate work with LaTeX.
-
-> [!NOTE]
-> This is the better and easier option, *in my opinion* :triumph::triumph:
 
 ## License
 
