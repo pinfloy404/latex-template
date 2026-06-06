@@ -10,18 +10,11 @@ A LaTeX template for documenting university projects.
 
 This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive) for all options.
 
-## DevContainer (Recommended)
-
-> [!WARNING]
-> Only recommended if you're using **VS Code** o similar
-
-This template uses a *DevContainer* configuration file at `.devcontainer` folder to create a separated working space with a *TexLive* image without install multiple packages.
-
-This *DevContainer* configuration file adds [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) to facilitate the work with LaTeX.
-
 ## Docker
 
-This template uses a *Docker Compose* file to create a *Docker* container with a *TexLive* image and all of it's packages, mounting a volume at `\latex-template` and this command to compile and generate a **.pdf** file:
+This template includes a *Docker Compose* configuration that creates a container based on *TexLive* image with all packages.
+
+The project is mounted into the container in a volume at `\latex-template`, allowing to compile the project and generate a **.pdf** file with this command:
 
 ```bash
 latexmk -pdf latex/main.tex
@@ -40,9 +33,18 @@ docker compose down -v
 ```
 
 ```bash
-#   Creates container, compiles project from Docker and closes container
+#   Compiles project in a temporary container
 docker compose run --rm latex-template
 ```
+
+## DevContainer
+
+> [!WARNING]
+> Only recommended if you're using **VS Code** or a compatible editor
+
+This template includes a *DevContainer* configuration at `.devcontainer` directory. 
+
+It provides an isolated enviroment based on *TexLive* image with the  [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension to simplify working and compiling LaTeX documents easier.
 
 ## License
 
