@@ -1,4 +1,4 @@
-# Latex Template
+# LaTeX Template
 
 ![latex](https://img.shields.io/badge/LaTeX-forestgreen?logo=latex&logoColor=white)
 ![docker](https://img.shields.io/badge/Docker-dodgerblue?logo=docker&logoColor=white)
@@ -44,8 +44,8 @@ docker compose run --rm latex-template
 
 This template includes a *DevContainer* configuration at `.devcontainer` directory. 
 
-It provides an isolated enviroment based on *TexLive* image with the  [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension to simplify working and compiling LaTeX documents easier.
+It provides an isolated environment based on *TexLive* image with the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension to simplify working with and compiling LaTeX documents more easily.
 
 ## License
 
-This repository uses the [GPLv3](https://choosealicense.com/licenses/gpl-3.0/) license.
+This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
