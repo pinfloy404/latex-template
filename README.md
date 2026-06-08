@@ -14,10 +14,10 @@ This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.co
 
 This template includes a *Docker Compose* configuration that creates a container based on *TexLive* image with all packages.
 
-The project is mounted into the container in a volume at `\latex-template`, allowing to compile the project and generate a **.pdf** file with this command:
+The project is mounted into the container in a volume at `\latex-template`, allowing to compile the project and generate a **.pdf** file at `out` directory with this command:
 
 ```bash
-latexmk -pdf latex/main.tex
+latexmk -pdf tex/main.tex
 ```
 
 To manage the container and compile the project, you can use these commands:
@@ -44,7 +44,7 @@ docker compose run --rm latex-template
 
 This template includes a *DevContainer* configuration at `.devcontainer` directory. 
 
-It provides an isolated environment based on *TexLive* image with the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension to simplify working with and compiling LaTeX documents more easily.
+It provides an isolated environment based on *TexLive* image with the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension and preconfigurations to simplify working with and compiling LaTeX documents more easily.
 
 ## License
 
