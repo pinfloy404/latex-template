@@ -1,4 +1,7 @@
 */*.aux
+*/*.bbl
+*/*.bcf
+*/*.blg
 */*.fdb*
 */*.fls
 */*.idx
@@ -7,5 +10,6 @@
 */*.log
 */*.out
 */*.pdf
+*/*.run*
 */*.synctex*
 */*.toc
