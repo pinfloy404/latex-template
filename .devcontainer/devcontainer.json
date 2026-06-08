@@ -3,7 +3,10 @@
     "image": "texlive/texlive:TL2025-historic",
     "customizations": {
         "vscode": {
-            "extensions": ["james-yu.latex-workshop"]
+            "extensions": ["james-yu.latex-workshop"],
+            "settings": {
+                "latex-workshop.latex.outDir": "out"
+            }
         }
     }
 }
