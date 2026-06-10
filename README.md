@@ -8,11 +8,14 @@
 
 A LaTeX template for documenting university projects.
 
+> [!IMPORTANT]
+> This template is intended by default for projects at **UCLM**. Replace the images in the `images` directory with your own
+
 This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive) for all options.
 
 ## Docker
 
-This template includes a *Docker Compose* configuration that creates a container based on *TexLive* image with all packages.
+This template includes a *Docker Compose* configuration that creates a container based on *Tex Live* image with all packages.
 
 The project is mounted into the container in a volume at `\latex-template`, allowing to compile the project and generate a **.pdf** file at `out` directory with this command:
 
@@ -44,7 +47,7 @@ docker compose run --rm latex-template
 
 This template includes a *DevContainer* configuration at `.devcontainer` directory.
 
-It provides an isolated environment based on *TexLive* image with the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension and preconfigurations to simplify working with and compiling LaTeX documents more easily.
+It provides an isolated environment based on *Tex Live* image with the [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop) extension and preconfigurations to simplify working with and compiling LaTeX documents more easily.
 
 ## License
 
