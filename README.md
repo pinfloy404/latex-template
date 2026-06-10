@@ -42,7 +42,7 @@ docker compose run --rm latex-template
 > [!WARNING]
 > Only recommended if you're using **VS Code** or a compatible editor
 
-This template includes a *DevContainer* configuration at `.devcontainer` directory. 
+This template includes a *DevContainer* configuration at `.devcontainer` directory.
 
 It provides an isolated environment based on *TexLive* image with the [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension and preconfigurations to simplify working with and compiling LaTeX documents more easily.
 
