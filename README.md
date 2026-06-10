@@ -9,7 +9,7 @@
 A LaTeX template for documenting university projects.
 
 > [!IMPORTANT]
-> This template is intended by default for projects at **UCLM**. Replace the images in the `images` directory with your own
+> This template is intended by default for projects at **UCLM**. Replace the images in the `tex/images` directory with your own
 
 This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive) for all options.
 
