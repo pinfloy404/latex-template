@@ -1,8 +1,9 @@
 services:
   latex-template:
+    image: latex/template:1.0
     build: .
     container_name: latex-template
     working_dir: /latex-template/tex
     volumes:
-    - ./:/latex-template
+    - ../:/latex-template
     command: latexmk -pdf -shell-escape -outdir=out main.tex

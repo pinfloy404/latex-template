@@ -11,7 +11,7 @@ A LaTeX template for documenting university projects.
 > [!IMPORTANT]
 > This template is intended by default for projects at **UCLM**. Replace the images in the `tex/images` directory with your own
 
-This template uses **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive) for all options.
+This template uses a customized **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive) for all options.
 
 ## Docker
 
@@ -27,17 +27,17 @@ To manage the container and compile the project, you can use these commands:
 
 ```bash
 #   Creates container
-docker compose up -d
+docker compose -f .docker/docker-compose.yml up -d
 ```
 
 ```bash
 #   Closes container
-docker compose down -v
+docker compose -f .docker/docker-compose.yml down -v
 ```
 
 ```bash
 #   Compiles project in a temporary container
-docker compose run --rm latex-template
+docker compose -f .docker/docker-compose.yml run --build --rm latex-template
 ```
 
 ## DevContainer
