@@ -1,11 +1,35 @@
 {
     "name": "latex-template",
     "image": "texlive/texlive:TL2025-historic",
+    "postCreateCommand": "apt-get update && apt-get install -y inkscape",
     "customizations": {
         "vscode": {
             "extensions": ["james-yu.latex-workshop"],
             "settings": {
-                "latex-workshop.latex.outDir": "out"
+                "latex-workshop.latex.outDir": "out",
+                "latex-workshop.latex.recipes": [
+                    {
+                        "name": "latexmk",
+                        "tools": [
+                            "latexmk"
+                        ]
+                    }
+                ],
+                "latex-workshop.latex.tools": [
+                    {
+                        "name": "latexmk",
+                        "command": "latexmk",
+                        "args": [
+                            "-synctex=1",
+                            "-interaction=nonstopmode",
+                            "-file-line-error",
+                            "-pdf",
+                            "-shell-escape",
+                            "-outdir=out",
+                            "%DOC%"
+                        ]
+                    }
+                ]
             }
         }
     }
