@@ -1,8 +1,8 @@
 services:
   latex-template:
-    image: texlive/texlive:TL2025-historic
+    build: .
     container_name: latex-template
     working_dir: /latex-template/tex
     volumes:
     - ./:/latex-template
-    command: latexmk -pdf -outdir=out main.tex
+    command: latexmk -pdf -shell-escape -outdir=out main.tex
