@@ -13,14 +13,21 @@ A LaTeX template for documenting university projects.
 
 This template uses a customized **LaTeX 2025** from this [Docker image](https://hub.docker.com/r/texlive/texlive) for all options.
 
+## Local
+
+This template can be used without Docker. These are the requirements to compile the project locally:
+
+- TeX Live 2025 or later
+- Inkscape
+
 ## Docker
 
-This template includes a *Docker Compose* configuration that creates a container based on *Tex Live* image with all packages.
+This template includes a Docker Compose and a Dockerfile configuration at `.docker/` directory that creates a container and a customized image based on Tex Live image with all packages and dependencies.
 
-The project is mounted into the container in a volume at `\latex-template`, allowing to compile the project and generate a **.pdf** file at `out` directory with this command:
+The project is mounted into the container in a volume at `\latex-template`, allowing to compile the project and generate a **.pdf** file at `out/` directory with this command:
 
 ```bash
-latexmk -pdf tex/main.tex
+latexmk -pdf -shell-escape -outdir=out tex/main.tex
 ```
 
 To manage the container and compile the project, you can use these commands:
@@ -45,9 +52,9 @@ docker compose -f .docker/docker-compose.yml run --build --rm latex-template
 > [!WARNING]
 > Only recommended if you're using **VS Code** or a compatible editor
 
-This template includes a *DevContainer* configuration at `.devcontainer` directory.
+This template includes a DevContainer configuration at `.devcontainer/` directory.
 
-It provides an isolated environment based on *Tex Live* image with the [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop) extension and preconfigurations to simplify working with and compiling LaTeX documents more easily.
+It provides an isolated environment based on Tex Live image with the [LaTeX Workshop](https://github.com/James-Yu/LaTeX-Workshop) extension and preconfigurations to simplify working with and compiling LaTeX documents more easily.
 
 ## License
 
